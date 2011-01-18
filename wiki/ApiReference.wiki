@@ -1,5 +1,7 @@
 #summary ApiReference to Chinese
 
+*!ActivityResultFacade*
+
 *!BatteryManagerFacade*
   * [#batteryCheckPresent batteryCheckPresent]
   * [#batteryGetHealth batteryGetHealth]
