@@ -1,7 +1,11 @@
 #summary ApiReference to Chinese
 
+*!BatteryManagerFacade*
+  * [#batteryCheckPresent batteryCheckPresent]
+  * [#batteryGetHealth batteryGetHealth]
 *!UiFacade*
   * [#addContextMenuItem addContextMenuItem]
+  * [#addOptionsMenuItem addOptionsMenuItem]
 
 
 ===,,addContextMenuItem,,===
@@ -12,4 +16,37 @@ addContextMenuItem(
  String event: 点击菜单项时触发的事件,
  Object eventData[可选])
 向上下文菜单中添加一个选项
+}}}
+
+===,,addOptionsMenuItem,,===
+添加选择菜单:
+{{{
+addOptionsMenuItem(
+ String label: 这个菜单项上显示的文字,
+ String event: 点击菜单项时触发的事件,
+ Object eventData[可选],
+ String iconName[optional]: Android 系统自带的菜单图标                   
+详细信息请查看:http://developer.android.com/reference/android/R.drawable.html)
+为选择菜单添加一个选项
+}}}
+
+===,,batteryCheckPresent,,===
+查看电池电量信息:
+{{{
+batteryCheckPresent()
+返回当前的电池电量信息
+需要 API Level 5.
+}}}
+
+===,,batteryGetHealth,,===
+查看电池健康状态:
+{{{
+batteryGetHealth()
+返回当前的电池健康状态信息:
+1 - 未知;
+2 - 良好;
+3 - 过热;
+4 - 不可用;
+5 - 电量过饱;
+6 - 查询失败;
 }}}
