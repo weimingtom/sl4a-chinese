@@ -1,0 +1,77 @@
+#summary TODOList 任务清单
+<wiki:toc max_depth="4" />
+
+== 来源 ==
+
+http://code.google.com/p/android-scripting/wiki/ApiReference
+
+== 任务认领及完成情况 ==
+=== ActivityResultFacade ===
+|| 任务 || 认领 || 完成情况 || 校检 ||
+|| setResultBoolean ||  ||  ||  ||
+|| setResultBooleanArray ||  ||  ||  ||
+|| setResultByte ||  ||  ||  ||
+|| setResultByteArray ||  ||  ||  ||
+|| setResultChar ||  ||  ||  ||
+|| setResultCharArray ||  ||  ||  ||
+|| setResultDouble ||  ||  ||  ||
+|| setResultDoubleArray ||  ||  ||  ||
+|| setResultFloat ||  ||  ||  ||
+|| setResultFloatArray ||  ||  ||  ||
+|| setResultInteger ||  ||  ||  ||
+|| setResultIntegerArray ||  ||  ||  ||
+|| setResultLong ||  ||  ||  ||
+|| setResultLongArray ||  ||  ||  ||
+|| setResultSerializable ||  ||  ||  ||
+|| setResultShort ||  ||  ||  ||
+|| setResultShortArray ||  ||  ||  ||
+|| setResultString ||  ||  ||  ||
+|| setResultStringArray ||  ||  ||  ||
+
+=== AlarmManagerFacade ===
+
+=== AndroidFacade ===
+
+=== ApplicationManagerFacade ===
+
+=== BatteryManagerFacade ===
+
+=== BluetoothFacade Requires API Level 5.===
+
+=== CameraFacade ===
+
+=== CommonIntentsFacade ===
+
+=== ConditionManagerFacade ===
+
+=== ContactsFacade ===
+
+=== EventFacade ===
+
+=== LocationFacade ===
+
+=== MediaRecorderFacade ===
+
+=== PhoneFacade ===
+
+=== PulseGeneratorFacade ===
+
+=== SensorManagerFacade ===
+
+=== SettingsFacade ===
+
+=== SignalStrengthFacade Requires API Level 7. ===
+
+=== SmsFacade ===
+
+=== SpeechRecognitionFacade ===
+
+=== TextToSpeechFacade Requires API Level 4. ===
+
+=== ToneGeneratorFacade ===
+
+=== UiFacade ===
+
+=== WakeLockFacade ===
+
+=== WifiFacade ===
