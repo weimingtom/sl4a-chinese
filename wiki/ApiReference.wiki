@@ -12,7 +12,7 @@
 添加上下文菜单项:
 {{{
 addContextMenuItem(
- String label: 这个菜单项上显示的文字,
+ String label: 菜单项上显示的文字,
  String event: 点击菜单项时触发的事件,
  Object eventData[可选])
 向上下文菜单中添加一个选项
@@ -22,7 +22,7 @@ addContextMenuItem(
 添加选择菜单:
 {{{
 addOptionsMenuItem(
- String label: 这个菜单项上显示的文字,
+ String label: 菜单项上显示的文字,
  String event: 点击菜单项时触发的事件,
  Object eventData[可选],
  String iconName[optional]: Android 系统自带的菜单图标                   
