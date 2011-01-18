@@ -5,28 +5,19 @@
 
 http://code.google.com/p/android-scripting/wiki/ApiReference
 
-== 任务认领及完成情况 ==
+== API ==
 === ActivityResultFacade ===
-|| 任务 || 认领 || 完成情况 || 校检 ||
-|| setResultBoolean ||  ||  ||  ||
-|| setResultBooleanArray ||  ||  ||  ||
-|| setResultByte ||  ||  ||  ||
-|| setResultByteArray ||  ||  ||  ||
-|| setResultChar ||  ||  ||  ||
-|| setResultCharArray ||  ||  ||  ||
-|| setResultDouble ||  ||  ||  ||
-|| setResultDoubleArray ||  ||  ||  ||
-|| setResultFloat ||  ||  ||  ||
-|| setResultFloatArray ||  ||  ||  ||
-|| setResultInteger ||  ||  ||  ||
-|| setResultIntegerArray ||  ||  ||  ||
-|| setResultLong ||  ||  ||  ||
-|| setResultLongArray ||  ||  ||  ||
-|| setResultSerializable ||  ||  ||  ||
-|| setResultShort ||  ||  ||  ||
-|| setResultShortArray ||  ||  ||  ||
-|| setResultString ||  ||  ||  ||
-|| setResultStringArray ||  ||  ||  ||
+==== setResultBoolean ====
+{{{
+setResultBoolean(
+ Integer resultCode: The result code to propagate back to the originating       
+activity, often RESULT_CANCELED (0) or RESULT_OK (-1),
+ Boolean resultValue)
+
+Sets the result of a script execution. Whenever the script APK is called via    
+startActivityForResult(), the resulting intent will contain SCRIPT_RESULT extra 
+with the given value.
+}}}
 
 === AlarmManagerFacade ===
 
