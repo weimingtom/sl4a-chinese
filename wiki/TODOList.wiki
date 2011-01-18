@@ -6,7 +6,7 @@
 http://code.google.com/p/android-scripting/wiki/ApiReference
 
 == API ==
-*ActivityResultFacade*
+===ActivityResultFacade===
 
 ==== setResultBoolean ====
 {{{
