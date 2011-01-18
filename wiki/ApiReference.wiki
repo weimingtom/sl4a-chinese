@@ -1,6 +1,6 @@
 #summary ApiReference to Chinese
 
-*!UIFacade*
+*!UiFacade*
   * [#addContextMenuItem addContextMenuItem]
 
 
