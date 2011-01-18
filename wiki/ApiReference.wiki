@@ -1,0 +1,16 @@
+#summary ApiReference to Chinese
+
+*!ActivityResultFacade*
+
+*!UIFacade*
+  * [#setAddContextMenuItem AddContextMenuItem]
+
+
+===,,addContextMenuItem,,添加上下文菜单项===
+{{{
+addContextMenuItem(
+ String label: 这个菜单项上显示的文字,
+ String event: 点击菜单项时触发的事件,
+ Object eventData[可选])
+向上下文菜单中添加一个选项
+}}}
