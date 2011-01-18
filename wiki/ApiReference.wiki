@@ -1,12 +1,11 @@
 #summary ApiReference to Chinese
 
-*!ActivityResultFacade*
-
 *!UIFacade*
-  * [#setAddContextMenuItem AddContextMenuItem]
+  * [#addContextMenuItem addContextMenuItem]
 
 
-===,,addContextMenuItem,,添加上下文菜单项===
+===,,addContextMenuItem,,===
+添加上下文菜单项:
 {{{
 addContextMenuItem(
  String label: 这个菜单项上显示的文字,
