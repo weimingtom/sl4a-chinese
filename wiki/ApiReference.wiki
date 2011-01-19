@@ -1,7 +1,7 @@
-#summary ApiReference to Chinese
+#summary 中文版API
 
 *!ActivityResultFacade*
-
+ * [#setResultBoolean setResultBoolean]
 *!BatteryManagerFacade*
   * [#batteryCheckPresent batteryCheckPresent]
   * [#batteryGetHealth batteryGetHealth]
@@ -9,6 +9,18 @@
   * [#addContextMenuItem addContextMenuItem]
   * [#addOptionsMenuItem addOptionsMenuItem]
 
+
+===,,setResultBoolean,,===
+setResultBoolean:
+{{{
+setResultBoolean(
+ Integer resultCode: :回传给原始activity的结果编码, 
+常常是RESULT_CANCELED(0) 或者 RESULT_OK(-1),
+ Boolean resultValue)
+设置脚本执行的结果.
+每当脚本程序被startActivityForResult()方法调用时,
+由此产生的intent将会包含SCRIPT_RESULT和给定的值.
+}}}
 
 ===,,addContextMenuItem,,===
 添加上下文菜单项:
