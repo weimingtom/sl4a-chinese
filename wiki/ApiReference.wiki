@@ -14,7 +14,7 @@
 
 
 ===,,setResultBoolean,,===
-setResultBoolean:
+设置脚本被startActivityForResult()方法调用后返回的布尔值:
 {{{
 setResultBoolean(
  Integer resultCode: :回传给原始activity的结果编码, 
@@ -26,7 +26,7 @@ setResultBoolean(
 }}}
 
 ===,,setResultBooleanArray,,===
-setResultBooleanArray:
+设置脚本被startActivityForResult()方法调用后返回的布尔值数组:
 {{{
 setResultBoolean(
  Integer resultCode: :回传给原始activity的结果编码, 
@@ -38,7 +38,7 @@ setResultBoolean(
 }}}
 
 ===,,setResultByte,,===
-setResultByte:
+设置脚本被startActivityForResult()方法调用后返回的字符:
 {{{
 setResultByte(
  Integer resultCode: :回传给原始activity的结果编码, 
@@ -50,7 +50,7 @@ setResultByte(
 }}}
 
 ===,,setResultByteArray,,===
-setResultByteArray:
+设置脚本被startActivityForResult()方法调用后返回的字符数组:
 {{{
 setResultByteArray(
  Integer resultCode: :回传给原始activity的结果编码, 
