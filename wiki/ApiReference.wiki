@@ -17,7 +17,7 @@
 设置脚本被startActivityForResult()方法调用后返回的布尔值:
 {{{
 setResultBoolean(
- Integer resultCode: :回传给原始activity的结果编码, 
+ Integer resultCode:回传给原始activity的结果编码, 
 常常是RESULT_CANCELED(0) 或者 RESULT_OK(-1),
  Boolean resultValue)
 
@@ -29,7 +29,7 @@ setResultBoolean(
 设置脚本被startActivityForResult()方法调用后返回的布尔值数组:
 {{{
 setResultBoolean(
- Integer resultCode: :回传给原始activity的结果编码, 
+ Integer resultCode:回传给原始activity的结果编码, 
 常常是RESULT_CANCELED(0) 或者 RESULT_OK(-1),
  Boolean[] resultValue)
 
@@ -41,7 +41,7 @@ setResultBoolean(
 设置脚本被startActivityForResult()方法调用后返回的字节:
 {{{
 setResultByte(
- Integer resultCode: :回传给原始activity的结果编码, 
+ Integer resultCode:回传给原始activity的结果编码, 
 常常是RESULT_CANCELED(0) 或者 RESULT_OK(-1),
  Byte resultValue)
 
@@ -53,7 +53,7 @@ setResultByte(
 设置脚本被startActivityForResult()方法调用后返回的字节数组:
 {{{
 setResultByteArray(
- Integer resultCode: :回传给原始activity的结果编码, 
+ Integer resultCode:回传给原始activity的结果编码, 
 常常是RESULT_CANCELED(0) 或者 RESULT_OK(-1),
  Byte[] resultValue)
 
