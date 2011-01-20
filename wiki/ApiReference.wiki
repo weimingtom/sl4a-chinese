@@ -38,7 +38,7 @@ setResultBoolean(
 }}}
 
 ===,,setResultByte,,===
-设置脚本被startActivityForResult()方法调用后返回的字符:
+设置脚本被startActivityForResult()方法调用后返回的字节:
 {{{
 setResultByte(
  Integer resultCode: :回传给原始activity的结果编码, 
@@ -50,7 +50,7 @@ setResultByte(
 }}}
 
 ===,,setResultByteArray,,===
-设置脚本被startActivityForResult()方法调用后返回的字符数组:
+设置脚本被startActivityForResult()方法调用后返回的字节数组:
 {{{
 setResultByteArray(
  Integer resultCode: :回传给原始activity的结果编码, 
