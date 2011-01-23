@@ -9,6 +9,17 @@
  * [#setResultCharArray setResultCharArray]
  * [#setResultDouble setResultDouble]
  * [#setResultDoubleArray setResultDoubleArray]
+ * [#setResultFloat setResultFloat]
+ * [#setResultFloatArray setResultFloatArray]
+ * [#setResultInteger setResultInteger]
+ * [#setResultIntegerArray setResultIntegerArray]
+ * [#setResultLong setResultLong]
+ * [#setResultLongArray setResultLongArray]
+ * [#setResultSerializable setResultSerializable]
+ * [#setResultShort setResultShort]
+ * [#setResultShortArray setResultShortArray]
+ * [#setResultString setResultString]
+ * [#setResultStringArray setResultStringArray]
 *!BatteryManagerFacade*
   * [#batteryCheckPresent batteryCheckPresent]
   * [#batteryGetHealth batteryGetHealth]
@@ -108,6 +119,139 @@ setResultDoubleArray(
  Integer resultCode:回传给原始activity的结果编码, 
 常常是RESULT_CANCELED(0) 或者 RESULT_OK(-1),
  Double[] resultValue)
+
+设置脚本执行的结果.每当脚本程序被startActivityForResult()
+方法调用时,由此产生的intent将会包含SCRIPT_RESULT和给定的值.
+}}}
+
+===,,setResultFloat,,===
+设置脚本被startActivityForResult()方法调用后返回的的单精度浮点数值:
+{{{
+setResultFloat(
+ Integer resultCode: 回传给原始activity的结果编码, 
+常常是RESULT_CANCELED(0) 或者 RESULT_OK(-1),
+ Float resultValue)
+
+设置脚本执行的结果.每当脚本程序被startActivityForResult()
+方法调用时,由此产生的intent将会包含SCRIPT_RESULT和给定的值.
+}}}
+
+===,,setResultFloatArray,,===
+设置脚本被startActivityForResult()方法调用后返回的单精度浮点型数组:
+{{{
+setResultFloatArray(
+ Integer resultCode: 回传给原始activity的结果编码, 
+常常是RESULT_CANCELED(0) 或者 RESULT_OK(-1),
+ Float[] resultValue)
+
+设置脚本执行的结果.每当脚本程序被startActivityForResult()
+方法调用时,由此产生的intent将会包含SCRIPT_RESULT和给定的值.
+}}}
+
+===,,setResultInteger,,===
+设置脚本被startActivityForResult()方法调用后返回的整数:
+{{{
+setResultInteger(
+ Integer resultCode: 回传给原始activity的结果编码, 
+常常是RESULT_CANCELED(0) 或者 RESULT_OK(-1),
+ Integer resultValue)
+
+设置脚本执行的结果.每当脚本程序被startActivityForResult()
+方法调用时,由此产生的intent将会包含SCRIPT_RESULT和给定的值.
+}}}
+
+===,,setResultIntegerArray,,===
+设置脚本被startActivityForResult()方法调用后返回的整型数组:
+{{{
+setResultIntegerArray(
+ Integer resultCode: 回传给原始activity的结果编码, 
+常常是RESULT_CANCELED(0) 或者 RESULT_OK(-1),
+ Integer[] resultValue)
+
+设置脚本执行的结果.每当脚本程序被startActivityForResult()
+方法调用时,由此产生的intent将会包含SCRIPT_RESULT和给定的值.
+}}}
+
+===,,setResultLong,,===
+设置脚本被startActivityForResult()方法调用后返回的长整数:
+{{{
+setResultLong(
+ Integer resultCode: 回传给原始activity的结果编码, 
+常常是RESULT_CANCELED(0) 或者 RESULT_OK(-1),
+ Long resultValue)
+
+设置脚本执行的结果.每当脚本程序被startActivityForResult()
+方法调用时,由此产生的intent将会包含SCRIPT_RESULT和给定的值.
+}}}
+
+===,,setResultLongArray,,===
+设置脚本被startActivityForResult()方法调用后返回的长整型数组:
+{{{
+setResultLongArray(
+ Integer resultCode: 回传给原始activity的结果编码, 
+常常是RESULT_CANCELED(0) 或者 RESULT_OK(-1),
+ Long[] resultValue)
+
+设置脚本执行的结果.每当脚本程序被startActivityForResult()
+方法调用时,由此产生的intent将会包含SCRIPT_RESULT和给定的值.
+}}}
+
+===,,setResultSerializable,,===
+设置脚本被startActivityForResult()方法调用后返回的可串行化的结果(Serializable):
+{{{
+setResultSerializable(
+ Integer resultCode: 回传给原始activity的结果编码, 
+常常是RESULT_CANCELED(0) 或者 RESULT_OK(-1),
+ Serializable resultValue)
+
+设置脚本执行的结果.每当脚本程序被startActivityForResult()
+方法调用时,由此产生的intent将会包含SCRIPT_RESULT和给定的值.
+}}}
+
+===,,setResultShort,,===
+设置脚本被startActivityForResult()方法调用后返回的短整数:
+{{{
+setResultShort(
+ Integer resultCode:: 回传给原始activity的结果编码, 
+常常是RESULT_CANCELED(0) 或者 RESULT_OK(-1),
+ Short resultValue)
+
+设置脚本执行的结果.每当脚本程序被startActivityForResult()
+方法调用时,由此产生的intent将会包含SCRIPT_RESULT和给定的值.
+}}}
+
+===,,setResultShortArray,,===
+设置脚本被startActivityForResult()方法调用后返回的短整型数组:
+{{{
+setResultShortArray(
+ Integer resultCode:: 回传给原始activity的结果编码, 
+常常是RESULT_CANCELED(0) 或者 RESULT_OK(-1),
+ Short[] resultValue)
+
+设置脚本执行的结果.每当脚本程序被startActivityForResult()
+方法调用时,由此产生的intent将会包含SCRIPT_RESULT和给定的值.
+}}}
+
+===,,setResultString,,===
+设置脚本被startActivityForResult()方法调用后返回的字符串:
+{{{
+setResultString(
+ Integer resultCode: 回传给原始activity的结果编码, 
+常常是RESULT_CANCELED(0) 或者 RESULT_OK(-1),
+ String resultValue)
+
+设置脚本执行的结果.每当脚本程序被startActivityForResult()
+方法调用时,由此产生的intent将会包含SCRIPT_RESULT和给定的值.
+}}}
+
+===,,setResultStringArray,,===
+设置脚本被startActivityForResult()方法调用后返回的字符串数组:
+{{{
+设置脚本被startActivityForResult()方法调用后返回的字符串数组
+setResultStringArray(
+ Integer resultCode: 回传给原始activity的结果编码, 
+常常是RESULT_CANCELED(0) 或者 RESULT_OK(-1),
+ String[] resultValue)
 
 设置脚本执行的结果.每当脚本程序被startActivityForResult()
 方法调用时,由此产生的intent将会包含SCRIPT_RESULT和给定的值.
