@@ -25,6 +25,7 @@
  * [#scheduleAbsolute scheduleAbsolute]
  * [#scheduleInexactRepeating scheduleInexactRepeating]
  * [#scheduleRelative scheduleRelative]
+ * [#scheduleRepeating scheduleRepeating]
 *!BatteryManagerFacade*
   * [#batteryCheckPresent batteryCheckPresent]
   * [#batteryGetHealth batteryGetHealth]
