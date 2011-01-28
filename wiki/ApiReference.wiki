@@ -41,7 +41,7 @@
  * [#setClipboard setClipboard]
  * [#startActivity startActivity]
  * [#startActivityForResult startActivityForResult]
- * [#vibrate setClipboard]
+ * [#vibrate vibrate]
 *!BatteryManagerFacade*
   * [#batteryCheckPresent batteryCheckPresent]
   * [#batteryGetHealth batteryGetHealth]
