@@ -26,6 +26,19 @@
  * [#scheduleInexactRepeating scheduleInexactRepeating]
  * [#scheduleRelative scheduleRelative]
  * [#scheduleRepeating scheduleRepeating]
+*!AndroidFacade*
+ * [#getClipboard getClipboard]
+ * [#getInput getInput]
+ * [#getIntent getIntent]
+ * [#getPackageVersion getPackageVersion]
+ * [#getPackageVersionCode getPackageVersionCode]
+ * [#getPassword getPassword]
+ * [#log log]
+ * [#makeToast makeToast]
+ * [#notify notify]
+ * [#requiredVersion requiredVersion]
+ * [#sendEmail sendEmail]
+ * [#setClipboard setClipboard]
 *!BatteryManagerFacade*
   * [#batteryCheckPresent batteryCheckPresent]
   * [#batteryGetHealth batteryGetHealth]
@@ -314,6 +327,162 @@ scheduleRepeating(
  Boolean wakeup[optional, default true]:是否唤醒处于黑屏状态的移动设备)
 
 每隔一段时间执行一次脚本,从开机开始计算
+}}}
+
+===,,getClipboard,,===
+读取剪贴板中的文本
+{{{
+getClipboard()
+
+从剪贴板中读取文本。
+
+返回值:
+  剪贴板中的文本。
+}}
+
+===,,getInput,,===
+请求用户输入文本
+{{{
+getInput(
+ String title[可选, 默认为 SL4A Inpu]: 输入框的标题
+ String message[k可选, 默认为 Please enter value:]: 输入框的提示信息)
+
+请求用户输入文本信息
+
+已废弃，请使用dialogGetInput方法替代。
+}}}
+
+===,,getIntent,,===
+获取启动脚本的Intent
+{{{
+getIntent()
+
+返回启动脚本的Intent
+}}}
+
+===,,getPackageVersion,,===
+返回包的版本名
+{{{
+getPackageVersion(
+  String packageName)
+
+返回包的版本名
+}}}
+
+===,,getPackageVersionCode,,===
+返回包的版本号
+{{{
+getPackageVersionCode(
+  String packageName)
+
+返回包的版本号
+}}}
+
+===,,getPassword,,===
+请求用户输入密码
+{{{
+getPassword(
+ String title[optional, default SL4A Password Input]: title of the input box,
+ String message[optional, default Please enter password:]: message to display   
+above the input box)
+
+请求用户输入密码。
+
+已废弃!请使用dialogGetPassword方法替代。
+}}}
+
+===,,log,,===
+写日志
+{{{
+log(
+  String message)
+
+向logcat中写入信息。
+}}}
+
+===,,makeToast,,===
+显示短暂提示框
+{{{
+makeToast(
+  String message)
+
+显示一个持续短暂时间的提示框。
+}}}
+
+===,,notify,,===
+通知
+{{{
+notify(
+ String title: 标题,
+ String message)
+
+显示一个通知，在用户点击后会取消。
+}}}
+
+===,,requiredVersion,,===
+检测版本信息
+{{{
+requiredVersion(
+ Integer requiredVersion)
+
+检测当前SL4A的版本是否大于制定的版本。
+}}}
+
+===,,sendEmail,,===
+发邮件
+{{{
+sendEmail(
+ String to: 一系列的收件人列表，用逗号分隔。
+ String subject,
+ String body,
+ String attachmentUri[可选])
+
+启动一个发送邮件的activity，将内容发送给接收者。
+}}}
+
+===,,setClipboard,,===
+向剪贴板写入信息
+{{{
+setClipboard(
+  String text)
+
+向剪贴板写入信息。
+}}}
+
+===,,startActivity,,===
+启动一个Activity
+{{{
+startActivity(
+ String action,
+ String uri[可选],
+ String type[k可选]: URI的MIME类型/子类型,
+ JSONObject extras[可选]: 要添加到Intent的附加数据，以map形式保存,
+ Boolean wait[可选]: 阻塞当前应用知道打开的Activity被关闭)
+
+启动一个Activity
+}}}
+
+===,,startActivityForResult,,===
+运行一个Activity并返回结果
+{{{
+startActivityForResult(
+ String action,
+ String uri[可选],
+ String type[可选]: URI的MIME类型/子类型,
+ JSONObject extras[可选]: 要添加到Intent的附加数据，以map形式保存)
+
+运行一个Activity并返回结果
+返回:
+  最终的intent,以map形式呈现
+}}}
+
+===,,vibrate,,===
+震动
+{{{
+vibrate(
+ Integer duration[可选, 默认为 300]: 持续时间,以毫秒为单位)
+
+使手机震动指定的时间。
 }}}
 
 ===,,addContextMenuItem,,===
