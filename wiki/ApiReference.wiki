@@ -41,7 +41,7 @@
  * [#setClipboard setClipboard]
  * [#startActivity startActivity]
  * [#startActivityForResult startActivityForResult]
- * [#vibrate vibrate]
+ * [#vibrate setClipboard]
 *!BatteryManagerFacade*
   * [#batteryCheckPresent batteryCheckPresent]
   * [#batteryGetHealth batteryGetHealth]
@@ -341,7 +341,7 @@ getClipboard()
 
 返回值:
   剪贴板中的文本。
-}}
+}}}
 
 ===,,getInput,,===
 请求用户输入文本
