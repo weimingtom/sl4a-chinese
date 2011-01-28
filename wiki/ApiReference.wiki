@@ -39,6 +39,9 @@
  * [#requiredVersion requiredVersion]
  * [#sendEmail sendEmail]
  * [#setClipboard setClipboard]
+ * [#startActivity startActivity]
+ * [#startActivityForResult startActivityForResult]
+ * [#vibrate vibrate]
 *!BatteryManagerFacade*
   * [#batteryCheckPresent batteryCheckPresent]
   * [#batteryGetHealth batteryGetHealth]
