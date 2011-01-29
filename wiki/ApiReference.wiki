@@ -42,12 +42,17 @@
  * [#startActivity startActivity]
  * [#startActivityForResult startActivityForResult]
  * [#vibrate vibrate]
+*!ApplicationManagerFacade*
+ * [#forceStopPackage forceStopPackage]
+ * [#getLaunchableApplications getLaunchableApplications]
+ * [#getRunningPackages getRunningPackages]
+ * [#launch launch]
 *!BatteryManagerFacade*
-  * [#batteryCheckPresent batteryCheckPresent]
-  * [#batteryGetHealth batteryGetHealth]
+ * [#batteryCheckPresent batteryCheckPresent]
+ * [#batteryGetHealth batteryGetHealth]
 *!UiFacade*
-  * [#addContextMenuItem addContextMenuItem]
-  * [#addOptionsMenuItem addOptionsMenuItem]
+ * [#addContextMenuItem addContextMenuItem]
+ * [#addOptionsMenuItem addOptionsMenuItem]
 
 
 ===,,setResultBoolean,,===
@@ -486,6 +491,43 @@ vibrate(
  Integer duration[可选, 默认为 300]: 持续时间,以毫秒为单位)
 
 使手机震动指定的时间。
+}}}
+
+===,,forceStopPackage,,===
+强制终止一个包
+{{{
+forceStopPackage(
+ String packageName: 包名)
+
+强制终止一个包。
+}}}
+
+===,,getLaunchableApplications,,===
+获得可运行的应用
+{{{
+getLaunchableApplications()
+
+返回一个可以运行的应用类名列表
+}}}
+
+===,,getRunningPackages,,===
+返回正在运行的activity或者服务的列表
+{{{
+getRunningPackages()
+
+返回一个正在运行的activity或者服务的列表。
+
+返回:
+  一个正在运行activity的列表。
+}}}
+
+===,,launch,,===
+启动一个Activity
+{{{
+launch(
+  String className)
+
+按照给定的类名启动一个Activity。
 }}}
 
 ===,,addContextMenuItem,,===
