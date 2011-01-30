@@ -589,7 +589,7 @@ batteryGetLevel()
 返回电池电量(百分比形式)
 
 需要 API Level 5.
-}}
+}}}
 
 ===,,batteryGetPlugType,,===
 返回充电状态信息
@@ -601,7 +601,7 @@ batteryGetPlugType()
 0 - 为插入电源;
 1 - 交流电源充电;
 2 - usb充电
-}}
+}}}
 
 ===,,batteryGetStatus,,===
 返回充电状态信息
@@ -614,7 +614,7 @@ batteryGetStatus()
 3 - 放电中;
 4 - 为充电;
 5 - 已充满;
-}}
+}}}
 
 ===,,batteryGetTechnology,,===
 
@@ -624,4 +624,4 @@ batteryGetTechnology()
 返回电池技术数据
 
 需要 API Level 5.
-}}
+}}}
