@@ -54,6 +54,11 @@
  * [#batteryGetPlugType batteryGetPlugType]
  * [#batteryGetStatus batteryGetStatus]
  * [#batteryGetTechnology batteryGetTechnology]
+ * [#batteryGetTemperature batteryGetTemperature]
+ * [#batteryGetVoltage batteryGetVoltage]
+ * [#batteryStartMonitoring batteryStartMonitoring]
+ * [#batteryStopMonitoring batteryStopMonitoring]
+ * [#readBatteryData readBatteryData]
 *!UiFacade*
  * [#addContextMenuItem addContextMenuItem]
  * [#addOptionsMenuItem addOptionsMenuItem]
@@ -624,4 +629,50 @@ batteryGetTechnology()
 返回电池技术数据
 
 需要 API Level 5.
+}}}
+
+===,,batteryGetTemperature,,===
+返回电池温度
+{{{
+batteryGetTemperature()
+
+返回当前电池的温度.
+
+需要 API Level 5.
+}}}
+
+===,,batteryGetVoltage,,===
+返回电池的电压
+{{{
+batteryGetVoltage()
+
+返回当前电池的电压.
+
+需要 API Level 5.
+}}}
+
+===,,batteryStartMonitoring,,===
+开始监视电池状态
+{{{
+batteryStartMonitoring()
+
+开始监视电池状态.
+
+触发 "battery" 事件.
+}}}
+
+===,,batteryStopMonitoring,,===
+停止监视电池状态
+{{{
+batteryStopMonitoring()
+
+停止监视电池状态
+}}}
+
+===,,readBatteryData,,===
+读取电池记录数据
+{{{
+readBatteryData()
+
+读取当前记录的电池数据
 }}}
