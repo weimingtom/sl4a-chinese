@@ -59,6 +59,18 @@
  * [#batteryStartMonitoring batteryStartMonitoring]
  * [#batteryStopMonitoring batteryStopMonitoring]
  * [#readBatteryData readBatteryData]
+*!BluetoothFacade*
+ * [#bluetoothAccept bluetoothAccept]
+ * [#bluetoothConnect bluetoothConnect]
+ * [#bluetoothGetConnectedDeviceName bluetoothGetConnectedDeviceName]
+ * [#bluetoothMakeDiscoverable bluetoothMakeDiscoverable]
+ * [#bluetoothRead bluetoothRead]
+ * [#bluetoothReadLine bluetoothReadLine]
+ * [#bluetoothReadReady bluetoothReadReady]
+ * [#bluetoothStop bluetoothStop]
+ * [#bluetoothWrite bluetoothWrite]
+ * [#checkBluetoothState checkBluetoothState]
+ * [#toggleBluetoothState toggleBluetoothState]
 *!UiFacade*
  * [#addContextMenuItem addContextMenuItem]
  * [#addOptionsMenuItem addOptionsMenuItem]
@@ -675,4 +687,135 @@ batteryStopMonitoring()
 readBatteryData()
 
 读取当前记录的电池数据
+}}}
+
+===,,bluetoothAccept,,===
+监听并接受一个蓝牙连接
+{{{
+bluetoothAccept(
+ String uuid[可选, 默认值为 457807c0-4897-11df-9879-0800200c9a66])
+
+监听并接受一个蓝牙连接。阻塞直到连接建立或者连接失败。
+
+需要 API Level 5.
+}}}
+
+===,,bluetoothConnect,,===
+通过蓝牙与一个移动终端进行连接
+{{{
+bluetoothConnect(
+ String uuid[可选, 默认值为 457807c0-4897-11df-9879-0800200c9a66]: 此处的 UUID  
+必须与服务端使用的UUID相匹配,
+ String address[可选]: 如果未提供此参数，将会给用户显示一个发现的可连接的移动
+终端列表工用户选择。)
+
+通过蓝牙与一个移动终端进行连接。阻塞直到连接建立或者连接失败。
+
+Returns:
+  连接建立成功则返回True。
+
+需要 API Level 5.
+}}}
+
+===,,,,===
+获取已连接的移动终端的的名称
+{{{
+bluetoothGetConnectedDeviceName()
+
+获取已连接的移动终端的的名称。
+
+需要 API Level 5.
+
+}}}
+
+===,,bluetoothMakeDiscoverable,,===
+设置蓝牙为可见状态
+{{{
+bluetoothMakeDiscoverable(
+ Integer duration[可选, 默认 300]: 移动终端蓝牙可见时间,以秒为单位)
+
+设置蓝牙连接在一段时间内为可见状态。
+
+需要 API Level 5.
+}}}
+
+===,,bluetoothRead,,===
+读取指定长度的数据
+{{{
+bluetoothRead(
+ Integer bufferSize[可选, 默认为 4096])
+
+读取指定长度的数据，长度由bufferSize参数指定。
+
+需要 API Level 5.
+}}}
+
+===,,bluetoothReadLine,,===
+读取下一行数据
+{{{
+bluetoothReadLine()
+
+读取下一行数据.
+
+需要 API Level 5.
+
+}}}
+
+===,,bluetoothReadReady,,===
+判断是否全部读取完成
+{{{
+bluetoothReadReady()
+
+还有后续数据可供读取，则返回True。
+
+需要 API Level 5.
+}}}
+
+===,,bluetoothStop,,===
+终端蓝牙连接
+{{{
+bluetoothStop()
+
+终端蓝牙连接。
+
+需要 API Level 5.
+}}}
+
+===,,bluetoothWrite,,===
+通过当前打开的蓝牙连接传送数据
+{{{
+bluetoothWrite(
+ String bytes)
+
+通过当前打开的蓝牙连接传送数据。
+
+需要 API Level 5.
+}}}
+
+===,,checkBluetoothState,,===
+检测蓝牙连接的状态
+{{{
+checkBluetoothState()
+
+检测蓝牙连接的状态。
+
+Returns:
+  如果连接已经建立,则返回True。
+
+需要 API Level 5.
+}}}
+
+===,,toggleBluetoothState,,===
+打开或者关闭蓝牙
+{{{
+toggleBluetoothState(
+ Boolean enabled[可选],
+ Boolean prompt[可选, 默认 true]: 是否提示用户当前蓝牙状态已改变)
+
+打开或者关闭蓝牙。
+
+Returns:
+  如果蓝牙可用，则返回True。
+
+需要 API Level 5.
 }}}
