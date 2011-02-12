@@ -717,7 +717,7 @@ Returns:
 需要 API Level 5.
 }}}
 
-===,,,,===
+===,,bluetoothGetConnectedDeviceName,,===
 获取已连接的移动终端的的名称
 {{{
 bluetoothGetConnectedDeviceName()
