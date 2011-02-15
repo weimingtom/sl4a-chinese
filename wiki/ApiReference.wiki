@@ -71,10 +71,17 @@
  * [#bluetoothWrite bluetoothWrite]
  * [#checkBluetoothState checkBluetoothState]
  * [#toggleBluetoothState toggleBluetoothState]
-*!UiFacade*
- * [#addContextMenuItem addContextMenuItem]
- * [#addOptionsMenuItem addOptionsMenuItem]
-
+*!CameraFacade*
+ * [#cameraCapturePicture cameraCapturePicture]
+ * [#cameraInteractiveCapturePicture cameraInteractiveCapturePicture]
+*!CommonIntentsFacade*
+ * [#pick pick]
+ * [#scanBarcode scanBarcode]
+ * [#search search]
+ * [#view view]
+ * [#viewContacts viewContacts]
+ * [#viewHtml viewHtml]
+ * [#viewMap viewMap]
 
 ===,,setResultBoolean,,===
 设置脚本被startActivityForResult()方法调用后返回的布尔值:
@@ -551,30 +558,6 @@ launch(
 按照给定的类名启动一个Activity。
 }}}
 
-===,,addContextMenuItem,,===
-添加上下文菜单项:
-{{{
-addContextMenuItem(
- String label: 菜单项上显示的文字,
- String event: 点击菜单项时触发的事件,
- Object eventData[可选])
-
-向上下文菜单中添加一个选项
-}}}
-
-===,,addOptionsMenuItem,,===
-添加选择菜单:
-{{{
-addOptionsMenuItem(
- String label: 菜单项上显示的文字,
- String event: 点击菜单项时触发的事件,
- Object eventData[可选],
- String iconName[optional]: Android 系统自带的菜单图标                   
-详细信息请查看:http://developer.android.com/reference/android/R.drawable.html)
-
-为选择菜单添加一个选项
-}}}
-
 ===,,batteryCheckPresent,,===
 查看电池电量信息:
 {{{
@@ -818,4 +801,93 @@ Returns:
   如果蓝牙可用，则返回True。
 
 需要 API Level 5.
+}}}
+
+===,,cameraCapturePicture,,===
+直接调用镜头并拍照
+{{{
+cameraCapturePicture(
+ String path,
+ Boolean useAutoFocus[可选, 默认为 true])
+
+拍照并保存到指定的路径。
+
+返回值:
+ map形式的列表,键为autoFocus和takePicture,值代表是否自动对焦和是否拍摄成功.
+}}}
+
+===,,cameraInteractiveCapturePicture,,===
+启动拍照程序拍照并保存到指定位置
+{{{
+cameraInteractiveCapturePicture(
+ String path)
+启动拍照程序拍照并保存到指定位置。
+}}}
+
+===,,pick,,===
+显示要被URI选取的内容
+{{{
+pick(
+ String uri)
+显示要被URI选取的内容（例如 联系人）
+
+Returns:
+  结果集合，以map形式保存。
+}}}
+===,,scanBarcode,,===
+运行二维码扫描器
+{{{
+scanBarcode()
+
+运行二维码扫描器。
+
+Returns:
+  显示结果Intent的map集合.
+
+}}}
+
+===,,search,,===
+搜索给定的查询字符串
+{{{
+search(
+  String query)
+
+搜索给定的查询字符串。
+}}}
+
+===,,view,,===
+通过URI运行一个带有view action的activity
+{{{
+view(
+ String uri,
+ String type[可选]: MIME type/subtype URI的MIME类型/子类型,
+ JSONObject extras[可选]: Intent中要添加额外信息的map集合)
+
+通过URI运行一个带有view action的activity。
+}}}
+
+===,,viewContacts,,===
+打开联系人列表
+{{{
+viewContacts()
+
+打开联系人列表。
+}}}
+
+===,,viewHtml,,===
+打开浏览器显示本地的HTML文件
+{{{
+viewHtml(
+ String path: HTML 文件的路径)
+
+打开浏览器显示本地的HTML文件。
+}}}
+
+===,,viewMap,,===
+打开地图，搜索指定的查询字符串
+{{{
+viewMap(
+ String query,例如 pizza, 123 My Street)
+
+打开地图，搜索指定的查询字符串 (例如 pizza, 123 My Street)。
 }}}
