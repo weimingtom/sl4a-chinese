@@ -82,6 +82,20 @@
  * [#viewContacts viewContacts]
  * [#viewHtml viewHtml]
  * [#viewMap viewMap]
+*!ConditionManagerFacade*
+ * [#onRingerSilent onRingerSilent]
+*!ContactsFacade*
+ * [#contactsGet contactsGet]
+ * [#contactsGetAttributes contactsGetAttributes]
+ * [#contactsGetById contactsGetById]
+ * [#contactsGetCount contactsGetCount]
+ * [#contactsGetIds contactsGetIds]
+ * [#pickContact pickContact]
+ * [#pickPhone pickPhone]
+*!EventFacade*
+ * [#postEvent postEvent]
+ * [#receiveEvent receiveEvent]
+ * [#waitForEvent waitForEvent]
 
 ===,,setResultBoolean,,===
 设置脚本被startActivityForResult()方法调用后返回的布尔值:
@@ -890,4 +904,117 @@ viewMap(
  String query,例如 pizza, 123 My Street)
 
 打开地图，搜索指定的查询字符串 (例如 pizza, 123 My Street)。
+}}}
+
+===,,onRingerSilent,,===
+当响铃模式被设置为静音时执行指定脚本
+{{{
+onRingerSilent(
+ String script: 响铃模式改变时执行脚本的路径。)
+
+当响铃模式被设置为静音时执行指定脚本。
+}}}
+
+===,,contactsGet,,===
+以列表的形式返回所有的联系人
+{{{
+contactsGet(
+ JSONArray attributes[可选])
+
+以列表的形式返回所有的联系人。
+
+Returns:
+ map形式的联系人列表。
+
+}}}
+
+===,,contactsGetAttributes,,===
+以列表的形式返回所有联系人相关的属性信息
+{{{
+contactsGetAttributes()
+
+以列表的形式返回所有联系人相关的属性信息。
+}}}
+
+===,,contactsGetById,,===
+获取指定Id的联系人信息
+{{{
+contactsGetById(
+ Integer id,
+  JSONArray attributes[可选])
+
+获取指定Id的联系人信息。
+}}}
+
+===,,contactsGetCount,,===
+获取联系人总数
+{{{
+contactsGetCount()
+
+获取联系人总数。
+}}}
+
+===,,contactsGetIds,,===
+返回所有联系人的Id
+{{{
+contactsGetIds()
+
+返回所有联系人的Id。
+}}}
+
+===,,pickContact,,===
+列出所有的联系人供用户选择
+{{{
+pickContact()
+
+列出所有的联系人供用户选择。
+
+Returns:
+  以map的形式返回选中的结果。
+}}}
+
+===,,pickPhone,,===
+列出所有电话号码供用户选
+{{{
+pickPhone()
+
+列出所有电话号码供用户选择。
+
+Returns:
+  选中的电话号码。
+}}}
+
+===,,postEvent,,===
+向事件列表中添加一个事件
+{{{
+postEvent(
+  String name,
+  String data)
+
+向事件列表中添加一个事件。
+}}}
+
+===,,receiveEvent,,===
+接受发生的事件
+{{{
+receiveEvent()
+
+接受发生的事件（例如位置或者传感器更新等）并从事件列表中把
+它删除(事件列表最多能存放最近触发的1024个事件)。
+
+Returns:
+  以Map的形式返回事件的属性。
+}}}
+
+===,,waitForEvent,,===
+等待（阻塞）直到给定的事件发生。返回的事件不会从缓存中清除
+{{{
+waitForEvent(
+ String eventName,
+ Integer timeout[可选]: 最长等待时间)
+
+等待（阻塞）直到给定的事件发生。返回的事件不会从缓存中清除。
+
+Returns:
+  以Map的形式返回事件的属性。
 }}}
