@@ -1116,7 +1116,7 @@ recorderStop()
 停止一个之前开始的摄像。
 }}}
 
-===,startInteractiveVideoRecording,,===
+===,,startInteractiveVideoRecording,,===
 运行视频拍摄程序拍摄视频并保存的指定路径
 {{{
 startInteractiveVideoRecording(
