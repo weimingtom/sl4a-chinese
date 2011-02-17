@@ -96,7 +96,17 @@
  * [#postEvent postEvent]
  * [#receiveEvent receiveEvent]
  * [#waitForEvent waitForEvent]
-
+*!LocationFacade*
+ * [#geocode geocode]
+ * [#getLastKnownLocation getLastKnownLocation]
+ * [#readLocation readLocation]
+ * [#startLocating startLocating]
+ * [#stopLocating stopLocating]
+*!MediaRecorderFacade*
+ * [#recorderCaptureVideo recorderCaptureVideo]
+ * [#recorderStartMicrophone recorderStartMicrophone]
+ * [#recorderStop recorderStop]
+ * [#startInteractiveVideoRecording startInteractiveVideoRecording]
 ===,,setResultBoolean,,===
 设置脚本被startActivityForResult()方法调用后返回的布尔值:
 {{{
@@ -1017,4 +1027,100 @@ waitForEvent(
 
 Returns:
   以Map的形式返回事件的属性。
+}}}
+
+===,,geocode,,===
+根据指定的坐标返回一些列的地址
+{{{
+geocode(
+ Double latitude,
+ Double longitude,
+ Integer maxResults[可选, 默认为 1]: 结果的最大数)
+
+根据指定的坐标返回一些列的地址。
+
+Returns:
+  一系列的地址.
+}}}
+
+===,,getLastKnownLocation,,===
+返回移动终端最新的位置
+{{{
+getLastKnownLocation()
+
+返回移动终端最新的位置。
+
+Returns:
+  以map的形式返回提供者提供的位置信息。
+  
+}}}
+
+===,,readLocation,,===
+从所有可获得的提供者中返回当前的位置作为指示
+{{{
+readLocation()
+
+从所有可获得的提供者中返回当前的位置作为指示。
+
+Returns:
+  以map的形式返回提供者提供的位置信息。
+}}}
+
+===,,startLocating,,===
+开始收集位置数据
+{{{
+startLocating(
+ Integer minDistance[可选，默认是 60000]: 最小的更新时间,单位是毫秒,
+ Integer minUpdateDistance[可选, 默认是 30]:最小的更新距离,单位是米)
+
+开始收集位置数据。
+触发"location"事件.
+}}}
+
+===,stopLocating,,===
+停止获取位置数据
+{{{
+stopLocating()
+
+停止获取位置数据。
+}}}
+
+===,,recorderCaptureVideo,,===
+录制视频（和音频）并把它存放的制定路径
+{{{
+recorderCaptureVideo(
+ String targetPath,
+ Double duration[可选],
+ Boolean recordAudio[可选, 默认是 true])
+
+录制视频（和音频）并把它存放的制定路径。
+制定最长录制时间。
+如果未指定持续时间参数则方法会立即返回，只有当recorderStop方法被调用或脚本退出时录制才会停止。
+除此之外录制会持续duration参数指定的时间。
+}}}
+
+===,,recorderStartMicrophone,,===
+录音并保存到指定的路径
+{{{
+recorderStartMicrophone(
+ String targetPath)
+
+录音并保存到指定的路径。
+}}}
+
+===,,recorderStop,,===
+停止一个之前开始的摄像
+{{{
+recorderStop()
+
+停止一个之前开始的摄像。
+}}}
+
+===,startInteractiveVideoRecording,,===
+运行视频拍摄程序拍摄视频并保存的指定路径
+{{{
+startInteractiveVideoRecording(
+ String path)
+
+运行视频拍摄程序拍摄视频并保存的指定路径。
 }}}
