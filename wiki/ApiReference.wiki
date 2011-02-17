@@ -1077,7 +1077,7 @@ startLocating(
 触发"location"事件.
 }}}
 
-===,stopLocating,,===
+===,,stopLocating,,===
 停止获取位置数据
 {{{
 stopLocating()
