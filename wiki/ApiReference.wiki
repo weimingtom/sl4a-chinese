@@ -107,6 +107,21 @@
  * [#recorderStartMicrophone recorderStartMicrophone]
  * [#recorderStop recorderStop]
  * [#startInteractiveVideoRecording startInteractiveVideoRecording]
+*!PhoneFacade*
+ * [#checkNetworkRoaming checkNetworkRoaming]
+ * [#getCellLocation getCellLocation]
+ * [#getDeviceId getDeviceId]
+ * [#getDeviceSoftwareVersion getDeviceSoftwareVersion]
+ * [#getLine1Number getLine1Number]
+ * [#getNeighboringCellInfo getNeighboringCellInfo]
+ * [#getNetworkOperator getNetworkOperator]
+ * [#getNetworkOperatorName getNetworkOperatorName]
+ * [#getNetworkType getNetworkType]
+ * [#getPhoneType getPhoneType]
+ * [#getSimCountryIso getSimCountryIso]
+ * [#getSimOperator getSimOperator]
+ * [#getSimOperatorName getSimOperatorName]
+
 ===,,setResultBoolean,,===
 设置脚本被startActivityForResult()方法调用后返回的布尔值:
 {{{
@@ -1077,7 +1092,7 @@ startLocating(
 触发"location"事件.
 }}}
 
-===,,stopLocating,,===
+===,stopLocating,,===
 停止获取位置数据
 {{{
 stopLocating()
@@ -1123,4 +1138,112 @@ startInteractiveVideoRecording(
  String path)
 
 运行视频拍摄程序拍摄视频并保存的指定路径。
+}}}
+
+===,,checkNetworkRoaming,,===
+检测当前网络是否处于漫游状态
+{{{
+checkNetworkRoaming()
+
+如果当前GSM网络连接处于漫游状态，则返true。
+}}}
+
+===,,getCellLocation,,===
+返回当前移动终端的位置。
+{{{
+getCellLocation()
+
+返回当前移动终端的位置。
+}}}
+
+===,,getDeviceId,,===
+返回当前移动终端的唯一标识
+{{{
+getDeviceId()
+
+返回当前移动终端的唯一标识,例如GSM网络返回IMEI码,CDMA网络返回MEID码。
+当移动终端的标识不可获得时，返回null。
+}}}
+
+===,,getDeviceSoftwareVersion,,===
+返回移动终端的软件版本
+{{{
+getDeviceSoftwareVersion()
+
+返回移动终端的软件版本，例如：GSM手机的IMEI/SV码。
+如果软件版本不可获得，则返回null。 
+}}}
+
+===,,getLine1Number,,===
+在一行中返回手机号
+{{{
+getLine1Number()
+
+在一行中返回手机号码，例如返回GSM的MSISDN号。
+如果获取不到则返回null。
+}}}
+
+===,,getNeighboringCellInfo,,===
+返回当前移动终端附近移动终端的信息
+{{{
+getNeighboringCellInfo()
+
+返回当前移动终端附近移动终端的信息。
+}}}
+
+===,,getNetworkOperator,,===
+返回当前已注册运营商的数值名称
+{{{
+getNetworkOperator()
+
+返回当前已注册运营商的数值名称（MCC+MNC）（移动国家码+移动网络码）。
+}}}
+
+===,,getNetworkOperatorName,,===
+返回当前注册运营商的字母名称
+{{{
+getNetworkOperatorName()
+
+返回当前注册运营商的字母名称。
+}}}
+
+===,,getNetworkType,,===
+返回移动终端当前使用的无线技术（网络类型）
+{{{
+getNetworkType()
+
+返回移动终端当前使用的无线技术（网络类型）。
+}}}
+
+===,,getPhoneType,,===
+返回移动终端的类型
+{{{
+getPhoneType()
+
+返回移动终端的类型。
+}}}
+
+===,,getSimCountryIso,,===
+返回符合iso标注的国家码
+{{{
+getSimCountryIso()
+
+Returns the ISO country code equivalent for the SIM provider's country code.
+返回符合iso标注的国家码，等同于sim卡提供商的国家码
+}}}
+
+===,,getSimOperator,,===
+返回Sim卡提供商的移动国家码和移动网络码组合
+{{{
+getSimOperator()
+
+返回Sim卡提供商的移动国家码和移动网络码组合,是个5或6位的数字。
+}}}
+
+===,,getSimOperatorName,,===
+返回服务运营商的名称
+{{{
+getSimOperatorName()
+
+返回服务运营商的名称（SPN）
 }}}
