@@ -121,6 +121,19 @@
  * [#getSimCountryIso getSimCountryIso]
  * [#getSimOperator getSimOperator]
  * [#getSimOperatorName getSimOperatorName]
+ * [#getSimSerialNumber getSimSerialNumber]
+ * [#getSimState getSimState]
+ * [#getSubscriberId getSubscriberId]
+ * [#getVoiceMailAlphaTag getVoiceMailAlphaTag]
+ * [#getVoiceMailNumber getVoiceMailNumber]
+ * [#phoneCall phoneCall]
+ * [#phoneCallNumber phoneCallNumber]
+ * [#phoneDial phoneDial]
+ * [#phoneDialNumber phoneDialNumber]
+ * [#readPhoneState readPhoneState]
+ * [#startTrackingPhoneState startTrackingPhoneState]
+ * [#stopTrackingPhoneState stopTrackingPhoneState]
+
 
 ===,,setResultBoolean,,===
 设置脚本被startActivityForResult()方法调用后返回的布尔值:
@@ -1247,3 +1260,108 @@ getSimOperatorName()
 
 返回服务运营商的名称（SPN）
 }}}
+
+===,,getSimSerialNumber,,===
+
+{{{
+getSimSerialNumber()
+返回sim卡的序列号
+返回sim卡的序列号，如果无法获得则返回null。
+}}
+
+===,,getSimState,,===
+返回移动终端
+{{{
+getSimState()
+
+返回移动终端。
+}}
+
+===,,getSubscriberId,,===
+返回用户唯一标识
+{{{
+getSubscriberId()
+
+返回用户唯一标识，比如GSM网络的IMSI编号。
+如果不可获得则返回null。
+}}
+
+===,,getVoiceMailAlphaTag,,===
+获取语音信箱号码关联的字母标识
+{{{
+getVoiceMailAlphaTag()
+
+获取语音信箱号码关联的字母标识。
+}}
+
+===,,getVoiceMailNumber,,===
+返回语音邮件号码
+{{{
+getVoiceMailNumber()
+
+返回语音邮件号码。如果无法获得则返回null。
+}}
+
+===,,phoneCall,,===
+通过URI调用一个联系人或电话号码
+{{{
+phoneCall(
+  String uri)
+
+通过URI调用一个联系人或电话号码。
+}}
+
+===,,phoneCallNumber,,===
+拨打一个电话号码
+{{{
+phoneCallNumber(
+  String phone number)
+
+拨打一个电话号码。
+}}
+
+===,,phoneDial,,===
+通过URI拨号
+{{{
+phoneDial(
+  String uri)
+
+通过URI拨号
+}}
+
+===,,phoneDialNumber,,===
+拨打一个电话号码
+{{{
+phoneDialNumber(
+  String phone number)
+
+拨打一个电话号码。
+}}
+
+===,,readPhoneState,,===
+返回当前移动终端状态和打入电话
+{{{
+readPhoneState()
+
+Returns the current phone state and incoming number.
+返回当前移动终端状态和打入电话
+Returns:
+  以map的形式保存的tate"state" 和 "incomingNumber"
+}}
+
+===,,startTrackingPhoneState,,===
+开始追踪移动终端状态。
+{{{
+startTrackingPhoneState()
+
+开始追踪移动终端状态。
+产生“Phone”事件
+}}
+
+===,,stopTrackingPhoneState,,===
+停止追踪移动终端状态
+{{{
+stopTrackingPhoneState()
+
+停止追踪移动终端状态。
+}}
