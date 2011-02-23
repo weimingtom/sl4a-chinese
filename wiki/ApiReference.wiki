@@ -133,6 +133,24 @@
  * [#readPhoneState readPhoneState]
  * [#startTrackingPhoneState startTrackingPhoneState]
  * [#stopTrackingPhoneState stopTrackingPhoneState]
+*!PulseGeneratorFacade*
+ * [#pulseGeneratorGetHz pulseGeneratorGetHz]
+ * [#pulseGeneratorGetHzSamples pulseGeneratorGetHzSamples]
+ * [#pulseGeneratorGetLeftPulseMs pulseGeneratorGetLeftPulseMs]
+ * [#pulseGeneratorGetLeftPulsePercent pulseGeneratorGetLeftPulsePercent]
+ * [#pulseGeneratorGetLeftPulseSamples pulseGeneratorGetLeftPulseSamples]
+ * [#pulseGeneratorGetRightPulseMs pulseGeneratorGetRightPulseMs]
+ * [#pulseGeneratorGetRightPulsePercent pulseGeneratorGetRightPulsePercent]
+ * [#pulseGeneratorGetRightPulseSamples pulseGeneratorGetRightPulseSamples]
+ * [#pulseGeneratorIsPlaying pulseGeneratorIsPlaying]
+ * [#pulseGeneratorRun pulseGeneratorRun]
+ * [#pulseGeneratorSetHzPercent pulseGeneratorSetHzPercent]
+ * [#pulseGeneratorSetLeftPulsePercent pulseGeneratorSetLeftPulsePercent]
+ * [#pulseGeneratorSetRightPulsePercent pulseGeneratorSetRightPulsePercent]
+ * [#pulseGeneratorStop pulseGeneratorStop]
+ * [#pulseGeneratorToggleInverted pulseGeneratorToggleInverted]
+ * [#pulseGeneratorTogglePlayback pulseGeneratorTogglePlayback]
+ * [#pulseGenteratorSetHz pulseGenteratorSetHz]
 
 
 ===,,setResultBoolean,,===
@@ -1364,4 +1382,147 @@ startTrackingPhoneState()
 stopTrackingPhoneState()
 
 停止追踪移动终端状态。
+}}}
+
+===,,pulseGeneratorGetHz,,===
+包装时钟发生器getHz()
+{{{
+pulseGeneratorGetHz()
+
+包装时钟发生器getHz()。
+}}}
+
+===,,pulseGeneratorGetHzSamples,,===
+包装时钟发生器方法getHzSamples()
+{{{
+pulseGeneratorGetHzSamples()
+
+包装时钟发生器方法getHzSamples()。
+}}}
+
+===,,pulseGeneratorGetLeftPulseMs,,===
+包装时钟发生器方法getLeftPulseMs()
+{{{
+pulseGeneratorGetLeftPulseMs()
+
+包装时钟发生器方法getLeftPulseMs()。
+
+}}}
+
+===,,pulseGeneratorGetLeftPulsePercent,,===
+包装时钟发生器方法getLeftPulsePercent()
+{{{
+pulseGeneratorGetLeftPulsePercent()
+
+包装时钟发生器方法getLeftPulsePercent()。
+
+}}}
+
+===,,pulseGeneratorGetLeftPulseSamples,,===
+包装时钟发生器方法getLeftPulseSamples()
+{{{
+pulseGeneratorGetLeftPulseSamples()
+
+包装时钟发生器方法getLeftPulseSamples()。
+
+}}}
+
+===,,pulseGeneratorGetRightPulseMs,,===
+包装时钟发生器方法getRightPulseMs()
+{{{
+pulseGeneratorGetRightPulseMs()
+
+包装时钟发生器方法getRightPulseMs()。
+}}}
+
+===,,pulseGeneratorGetRightPulsePercent,,===
+包装时钟发生器方法getRightPulsePercent()
+{{{
+pulseGeneratorGetRightPulsePercent()
+
+包装时钟发生器方法getRightPulsePercent()。
+}}}
+
+===,,pulseGeneratorGetRightPulseSamples,,===
+包装时钟发生器方法getRightPulseSamples()
+{{{
+pulseGeneratorGetRightPulseSamples()
+
+包装时钟发生器方法getRightPulseSamples()。
+}}}
+
+===,,pulseGeneratorIsPlaying,,===
+包装时钟发生器方法isPlaying()
+{{{
+pulseGeneratorIsPlaying()
+
+包装时钟发生器方法isPlaying()。
+}}}
+
+===,,pulseGeneratorRun,,===
+包装时钟发生器方法run()
+{{{
+pulseGeneratorRun()
+
+包装时钟发生器方法run()。
+}}}
+
+===,,pulseGeneratorSetHzPercent,,===
+包装时钟发生器方法setHzPercent()
+{{{
+pulseGeneratorSetHzPercent(
+ Integer percent)
+
+包装时钟发生器方法setHzPercent()
+}}}
+
+===,,pulseGeneratorSetLeftPulsePercent,,===
+包装时钟发生器方法setLeftPulsePercent()
+{{{
+pulseGeneratorSetLeftPulsePercent(
+ Integer percent)
+
+包装时钟发生器方法setLeftPulsePercent()。
+}}}
+
+===,,pulseGeneratorSetRightPulsePercent,,===
+包装时钟发生器方法setRightPulsePercent()
+{{{
+pulseGeneratorSetRightPulsePercent(
+ Integer percent)
+
+包装时钟发生器方法setRightPulsePercent()。
+}}}
+
+===,,pulseGeneratorStop,,===
+包装时钟发生器方法stop()
+{{{
+pulseGeneratorStop()
+
+包装时钟发生器方法stop()。
+}}}
+
+===,,pulseGeneratorToggleInverted,,===
+包装时钟发生器方法toggleInverted()
+{{{
+pulseGeneratorToggleInverted()
+
+包装时钟发生器方法toggleInverted()。
+}}}
+
+===,,pulseGeneratorTogglePlayback,,===
+包装时钟发生器方法togglePlayback()
+{{{
+pulseGeneratorTogglePlayback()
+
+包装时钟发生器方法togglePlayback()。
+
+}}}
+
+===,,pulseGenteratorSetHz,,===
+包装时钟发生器方法setHz()
+{{{
+pulseGenteratorSetHz(
+  Float hz)
+包装时钟发生器方法setHz()。
 }}}
