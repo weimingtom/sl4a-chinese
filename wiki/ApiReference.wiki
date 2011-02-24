@@ -151,7 +151,15 @@
  * [#pulseGeneratorToggleInverted pulseGeneratorToggleInverted]
  * [#pulseGeneratorTogglePlayback pulseGeneratorTogglePlayback]
  * [#pulseGenteratorSetHz pulseGenteratorSetHz]
-
+*!SensorManagerFacade*
+ * [#readSensors readSensors]
+ * [#sensorsGetAccuracy sensorsGetAccuracy]
+ * [#sensorsGetLight sensorsGetLight]
+ * [#sensorsReadAccelerometer sensorsReadAccelerometer]
+ * [#sensorsReadMagnetometer sensorsReadMagnetometer]
+ * [#sensorsReadOrientation sensorsReadOrientation]
+ * [#startSensing startSensing]
+ * [#stopSensing stopSensing]
 
 ===,,setResultBoolean,,===
 设置脚本被startActivityForResult()方法调用后返回的布尔值:
@@ -1525,4 +1533,82 @@ pulseGeneratorTogglePlayback()
 pulseGenteratorSetHz(
   Float hz)
 包装时钟发生器方法setHz()。
+}}}
+
+===,,readSensors,,===
+返回当前接受到的传感器信息
+{{{
+readSensors()
+
+返回当前接受到的传感器信息。
+}}}
+
+===,,sensorsGetAccuracy,,===
+返回当前接受到的精确值
+{{{
+sensorsGetAccuracy()
+
+返回当前接收到的精度值。
+}}}
+
+===,,sensorsGetLight,,===
+返回当前接收到的光度值
+{{{
+sensorsGetLight()
+
+Returns the most recently received light value.
+返回当前接收到的光度值。
+}}}
+
+===,,sensorsReadAccelerometer,,===
+返回最近接收到的加速度值
+{{{
+sensorsReadAccelerometer()
+
+返回最近接收到的加速度值。
+
+Returns:
+  以列表形式存放的float值 [(加速度在) X 轴, Y 轴, Z 轴]。
+}}}
+
+===,,sensorsReadMagnetometer,,===
+返回最近接收到的引力值
+{{{
+sensorsReadMagnetometer()
+
+返回当前接收到的引力值。
+
+Returns:
+ 以列表形式存放的float值 [(引力值在) X 轴, Y 轴, Z 轴]。
+}}}
+
+===,,sensorsReadOrientation,,===
+
+{{{
+sensorsReadOrientation()
+
+Returns the most recently received orientation values.
+返回当前接受到的方向值。
+
+Returns:
+  以列表形式存放的Doubles值 [方位角, 仰角, 转动角度].
+}}}
+
+===,,startSensing,,===
+开始记录传感器数据供轮询
+{{{
+startSensing(
+ Integer sampleSize[可选, 默认值为 5]: 求平均值时的样本数)
+
+开始记录传感器数据供轮询。
+
+产生"sensors"事件
+}}}
+
+===,,stopSensing,,===
+停止收集传感器信息
+{{{
+stopSensing()
+
+停止收集传感器信息。
 }}}
