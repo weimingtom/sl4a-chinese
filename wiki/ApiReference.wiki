@@ -160,6 +160,22 @@
  * [#sensorsReadOrientation sensorsReadOrientation]
  * [#startSensing startSensing]
  * [#stopSensing stopSensing]
+*!SettingsFacade*
+ * [#checkAirplaneMode checkAirplaneMode]
+ * [#checkRingerSilentMode checkRingerSilentMode]
+ * [#checkScreenOn checkScreenOn]
+ * [#getMaxMediaVolume getMaxMediaVolume]
+ * [#getMaxRingerVolume getMaxRingerVolume]
+ * [#getMediaVolume getMediaVolume]
+ * [#getRingerVolume getRingerVolume]
+ * [#getScreenBrightness getScreenBrightness]
+ * [#getScreenTimeout getScreenTimeout]
+ * [#setMediaVolume setMediaVolume]
+ * [#setRingerVolume setRingerVolume]
+ * [#setScreenBrightness setScreenBrightness]
+ * [#setScreenTimeout setScreenTimeout]
+ * [#toggleAirplaneMode toggleAirplaneMode]
+ * [#toggleRingerSilentMode toggleRingerSilentMode]
 
 ===,,setResultBoolean,,===
 设置脚本被startActivityForResult()方法调用后返回的布尔值:
@@ -1611,4 +1627,150 @@ startSensing(
 stopSensing()
 
 停止收集传感器信息。
+}}}
+
+===,,checkAirplaneMode,,===
+检查是否设置了飞行模式
+{{{
+checkAirplaneMode()
+
+检查是否设置了飞行模式。
+
+返回值:
+  如果打开了飞行模式则返回True。
+}}}
+
+===,,checkRingerSilentMode,,===
+检测是否设置了静音模式
+{{{
+checkRingerSilentMode()
+
+检测是否设置了静音模式。
+
+返回值:
+  如果处于静音模式则返回True。
+}}}
+
+===,,checkScreenOn,,===
+检测当前屏幕是否关闭
+{{{
+checkScreenOn()
+
+检测当前屏幕是否关闭（需要 API level 7支持）
+
+返回:
+  如果屏幕打开则返回True
+}}}
+
+===,,getMaxRingerVolume,,===
+返回最大的音量值
+{{{
+getMaxRingerVolume()
+
+返回铃声的最大音量值。
+}}}
+
+===,,getMediaVolume,,===
+
+{{{
+getMediaVolume()
+
+返回当前媒体音量。
+}}}
+
+===,,getRingerVolume,,===
+返回当前铃声的音量
+{{{
+getRingerVolume()
+
+返回当前铃声的音量。
+}}}
+
+===,,getScreenBrightness,,===
+返回屏幕的亮度
+{{{
+getScreenBrightness()
+
+Returns the screen backlight brightness.
+返回屏幕的亮度。
+
+返回值:
+  返回当前的屏幕亮度，范围在 0 到 255之间
+}}}
+
+===,,getScreenTimeout,,===
+返回当前屏幕的超时时间，以秒为单位
+{{{
+getScreenTimeout()
+
+返回当前屏幕的超时时间，以秒为单位。
+
+Returns:
+  当前超时时间。
+}}}
+
+===,,setMediaVolume,,===
+设置媒体音量
+{{{
+setMediaVolume(
+  Integer volume)
+
+设置媒体音量。
+}}}
+
+===,,setRingerVolume,,===
+设置铃声音量
+{{{
+setRingerVolume(
+  Integer volume)
+
+设置铃声音量。
+}}}
+
+===,,setScreenBrightness,,===
+设置屏幕的亮度
+{{{
+setScreenBrightness(
+ Integer value: 亮度值,范围在 0 到 255之间)
+
+设置屏幕的亮度。
+
+返回值:
+  屏幕的原始亮度。
+}}}
+
+===,,setScreenTimeout,,===
+设置屏幕超时关闭时间,以秒为单位
+{{{
+setScreenTimeout(
+ Integer value)
+
+设置屏幕超时关闭时间,以秒为单位。
+
+返回值:
+  屏幕原始的超时时间。
+}}}
+
+===,,toggleAirplaneMode,,===
+打开或者关闭飞行模式
+{{{
+toggleAirplaneMode(
+ Boolean enabled[可选])
+
+打开或者关闭飞行模式。
+
+返回值:
+  如果处于飞行模式则返回True。
+}}}
+
+===,,toggleRingerSilentMode,,===
+设置静音模式
+{{{
+toggleRingerSilentMode(
+ Boolean enabled[可选])
+
+打开或者关闭静音模式。
+
+返回值:
+  如果处于静音模式则返回True。
 }}}
