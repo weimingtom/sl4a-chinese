@@ -1844,7 +1844,6 @@ stopTrackingSignalStrengths()
 smsDeleteMessage(
  Integer id)
 
-Deletes a message.
 删除指定的短信息。
 
 Returns:
