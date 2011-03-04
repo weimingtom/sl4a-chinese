@@ -176,6 +176,26 @@
  * [#setScreenTimeout setScreenTimeout]
  * [#toggleAirplaneMode toggleAirplaneMode]
  * [#toggleRingerSilentMode toggleRingerSilentMode]
+*!SignalStrengthFacade 需要 API Level 7.*
+ * [#readSignalStrengths readSignalStrengths]
+ * [#startTrackingSignalStrengths startTrackingSignalStrengths]
+ * [#stopTrackingSignalStrengths stopTrackingSignalStrengths]
+*!SmsFacade*
+ * [#smsDeleteMessage smsDeleteMessage]
+ * [#smsGetAttributes smsGetAttributes]
+ * [#smsGetMessageById smsGetMessageById]
+ * [#smsGetMessageCount smsGetMessageCount]
+ * [#smsGetMessageIds smsGetMessageIds]
+ * [#smsGetMessages smsGetMessages]
+ * [#smsMarkMessageRead smsMarkMessageRead]
+ * [#smsSend smsSend]
+*!SpeechRecognitionFacade*
+ * [#recognizeSpeech recognizeSpeech]
+*!TextToSpeechFacade 需要 API Level 4.*
+ * [#ttsIsSpeaking ttsIsSpeaking]
+ * [#ttsSpeak ttsSpeak]
+*!ToneGeneratorFacade*
+ * [#generateDtmfTones generateDtmfTones]
 
 ===,,setResultBoolean,,===
 设置脚本被startActivityForResult()方法调用后返回的布尔值:
@@ -1781,4 +1801,174 @@ toggleRingerSilentMode(
 
 返回值:
   如果处于静音模式则返回True。
+}}}
+
+===,,readSignalStrengths,,===
+返回当前的信号强度
+{{{
+readSignalStrengths()
+
+返回当前的信号强度。
+
+Returns:
+  以map形式存放的 "gsm_signal_strength"（GSM信号强度）
+
+需要 API Level 7.
+}}}
+
+===,,startTrackingSignalStrengths,,===
+开始监测信号强度
+{{{
+startTrackingSignalStrengths()
+
+开始监测信号强度。
+
+产生 "signal_strengths"事件。
+
+需要 API Level 7.
+}}}
+
+===,,stopTrackingSignalStrengths,,===
+停止监测信号强度
+{{{
+stopTrackingSignalStrengths()
+
+停止监测信号强度。
+
+需要 API Level 7.
+}}}
+
+===,,smsDeleteMessage,,===
+删除指定的短信息
+{{{
+smsDeleteMessage(
+ Integer id)
+
+Deletes a message.
+删除指定的短信息。
+
+Returns:
+  如果信息被成功删除则返回True
+}}}
+
+===,,smsGetAttributes,,===
+返回所有可能的信息属性
+{{{
+smsGetAttributes()
+
+返回所有可能的信息属性。
+}}}
+
+===,,smsGetMessageById,,===
+返回指定信息的属性
+{{{
+smsGetMessageById(
+ Integer id: message ID,
+ JSONArray attributes[可选])
+
+返回指定信息的属性。
+}}}
+
+===,,smsGetMessageCount,,===
+返回短信息的数目
+{{{
+smsGetMessageCount(
+ Boolean unreadOnly,
+ String folder[可选, 默认为 inbox（收件箱）])
+
+返回短信息的数目。
+}}}
+
+===,,smsGetMessageIds,,===
+返回所有信息的Id
+{{{
+smsGetMessageIds(
+ Boolean unreadOnly,
+ String folder[可选, 默认为 inbox（收件箱）])
+
+返回所有信息的Id。
+}}}
+
+===,,smsGetMessages,,===
+
+{{{
+smsGetMessages(
+ Boolean unreadOnly,
+ String folder[可选, 默认为 inbox（收件箱）],
+ JSONArray attributes[可选])
+
+返回所有信息的列表
+
+返回值:
+  以map形式存放的信息列表
+}}}
+
+===,,smsGetMessages,,===
+
+{{{
+smsMarkMessageRead(
+ JSONArray ids: 要标记为已读的短信息Id列表。
+ Boolean read)
+
+将短信息标记为已读。
+
+返回值:
+  被标记为已读的信息的数字。
+}}}
+
+===,,smsSend,,===
+发送一条短信
+{{{
+smsSend(
+ String destinationAddress: 例如一个手机号码,
+ String text)
+
+发送一条短信。
+}}}
+
+===,,recognizeSpeech,,===
+识别用户的语音返回最相似的结果
+{{{
+recognizeSpeech(
+ String prompt[可选]: 要求用户阅读时显示的提示信息,
+ String language[可选]: 重新设置识别器期望的语言,
+这个语言要不同于java.util.Locale.getDefault()设置的语言,
+ String languageModel[可选]: 指定识别器使用哪种语音模式
+(浏览 android.speech.RecognizeIntent了解更多))
+
+识别用户的语音返回最相似的结果。
+
+Returns:
+  如果内容不能识别则返回一个空串。
+}}}
+
+===,,ttsIsSpeaking,,===
+如果当前正处于TTS阅读状态则返回True
+{{{
+ttsIsSpeaking()
+
+如果当前正处于TTS阅读状态则返回True
+
+需要 API Level 4.
+}}}
+
+===,,ttsSpeak,,===
+通过TTS读出给定的信息
+{{{
+ttsSpeak(
+  String message)
+
+通过TTS读出给定的信息。
+
+需要 API Level 4.
+}}}
+
+===,,generateDtmfTones,,===
+为指定的电话号码合成DTMF发音
+{{{
+generateDtmfTones(
+ String phoneNumber,
+ Integer toneDuration[可选, 默认为 100]: 每次发音之间的时间间隔)
+
+为指定的电话号码合成DTMF发音。
 }}}
