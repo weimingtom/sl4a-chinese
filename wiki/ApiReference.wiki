@@ -224,6 +224,24 @@
  * [#dialogsetsinglechoiceitems dialogsetsinglechoiceitems]
  * [#dialogshow dialogshow]
  * [#webviewshow webviewshow]
+*!WakeLockFacade*
+ * [#wakeLockAcquireBright wakeLockAcquireBright]
+ * [#wakeLockAcquireDim wakeLockAcquireDim]
+ * [#wakeLockAcquireFull wakeLockAcquireFull]
+ * [#wakeLockAcquirePartial wakeLockAcquirePartial]
+ * [#wakeLockRelease wakeLockRelease]
+*!WifiFacade*
+ * [#checkWifiState checkWifiState]
+ * [#toggleWifiState toggleWifiState]
+ * [#wifiDisconnect wifiDisconnect]
+ * [#wifiGetConnectionInfo wifiGetConnectionInfo]
+ * [#wifiGetScanResults wifiGetScanResults]
+ * [#wifiLockAcquireFull wifiLockAcquireFull]
+ * [#wifiLockAcquireScanOnly wifiLockAcquireScanOnly]
+ * [#wifiLockRelease wifiLockRelease]
+ * [#wifiReassociate wifiReassociate]
+ * [#wifiReconnect wifiReconnect]
+ * [#wifiStartScan wifiStartScan]
 
 ===,,setresultboolean,,===
 设置脚本被startactivityforresult()方法调用后返回的布尔值:
@@ -2268,4 +2286,154 @@ webviewshow(
  boolean wait[可选]: 阻断知道用户推出浏览页面)
 
 浏览指定的url页面。
+}}}
+
+===,,wakeLockAcquireBright,,===
+获得一个打开CPU和屏幕的锁
+{{{
+wakeLockAcquireBright()
+
+获得一个打开CPU和屏幕的锁（CPU打开，屏幕亮）。
+}}}
+
+===,,wakeLockAcquireDim,,===
+获得一个打开CPU但不打开屏幕的锁。
+{{{
+wakeLockAcquireDim()
+
+Acquires a dim wake lock (CPU on, screen dim).
+获得一个打开CPU但不打开屏幕的锁（CPU打开，屏幕暗）。
+}}}
+
+===,,wakeLockAcquireFull,,===
+获得一个完全打开锁
+{{{
+wakeLockAcquireFull()
+
+Acquires a full wake lock (CPU on, screen bright, keyboard bright).
+获得一个完全打开锁(CPU打开,屏幕亮,键盘亮)。
+}}}
+
+===,,wakeLockAcquirePartial,,===
+获得一个部分打锁
+{{{
+wakeLockAcquirePartial()
+
+获得一个部分打锁(仅CPU打开)。
+}}}
+
+===,,wakeLockRelease,,===
+
+{{{
+wakeLockRelease()
+
+释放一个唤醒锁。
+}}}
+
+===,,checkWifiState,,===
+检测wifi状态
+{{{
+checkWifiState()
+
+检测wifi状态。
+
+Returns:
+  如果wifi可用则返回True。
+}}}
+
+===,,toggleWifiState,,===
+打开或者关闭Wifi
+{{{
+toggleWifiState(
+ Boolean enabled[可选])
+
+打开或者关闭Wifi。
+
+Returns:
+  如果Wifi可用则返回True。
+}}}
+
+===,,wifiDisconnect,,===
+从当前连接的wifi网络断开
+{{{
+wifiDisconnect()
+
+从当前连接的wifi网络断开。
+
+Returns:
+  操作成功则返回True。
+}}}
+
+===,,wifiGetConnectionInfo,,===
+返回当前连接热点的信息
+{{{
+wifiGetConnectionInfo()
+
+返回当前连接热点的信息。
+}}}
+
+===,,wifiGetScanResults,,===
+返回当前可连接的Wifi连接列表
+{{{
+wifiGetScanResults()
+
+返回当前可连接的Wifi连接列表。
+}}}
+
+===,,wifiLockAcquireFull,,===
+获取一个完整的wifi锁
+{{{
+wifiLockAcquireFull()
+
+获取一个完整的wifi锁。
+}}}
+
+===,,wifiLockAcquireScanOnly,,===
+获取一个只搜索wifi的锁
+{{{
+wifiLockAcquireScanOnly()
+
+获取一个只搜索wifi的锁。
+}}}
+
+===,,wifiLockRelease,,===
+释放一个之前获得的wifi锁
+{{{
+wifiLockRelease()
+
+释放一个之前获得的wifi锁。
+}}}
+
+===,,wifiReassociate,,===
+重新与当前的接入点关联。
+{{{
+wifiReassociate()
+
+Reassociates with the currently active access point.
+重新与当前的接入点关联。
+
+Returns:
+  操作成功则返回True。
+}}}
+
+===,,wifiReconnect,,===
+重新连接到当前接入点
+{{{
+wifiReconnect()
+
+重新连接到当前接入点。
+
+返回值:
+  操作成功则返回True。
+}}}
+
+===,,wifiStartScan,,===
+开始搜索wifi接入点
+{{{
+wifiStartScan()
+
+开始搜索wifi接入点。
+
+Returns:
+  如果扫描初始化成功则返回True。
 }}}
