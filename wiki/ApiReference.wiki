@@ -1,6 +1,6 @@
 #summary 中文版api
 
-*!activityresultfacade*
+*!Activityresultfacade*
  * [#setresultboolean setresultboolean]
  * [#setresultbooleanarray setresultbooleanarray]
  * [#setresultbyte setresultbyte]
@@ -20,13 +20,13 @@
  * [#setresultshortarray setresultshortarray]
  * [#setresultstring setresultstring]
  * [#setresultstringarray setresultstringarray]
-*!alarmmanagerfacade*
+*!Alarmmanagerfacade*
  * [#cancelrepeating cancelrepeating]
  * [#scheduleabsolute scheduleabsolute]
  * [#scheduleinexactrepeating scheduleinexactrepeating]
  * [#schedulerelative schedulerelative]
  * [#schedulerepeating schedulerepeating]
-*!androidfacade*
+*!Androidfacade*
  * [#getclipboard getclipboard]
  * [#getinput getinput]
  * [#getintent getintent]
@@ -42,12 +42,12 @@
  * [#startactivity startactivity]
  * [#startactivityforresult startactivityforresult]
  * [#vibrate vibrate]
-*!applicationmanagerfacade*
+*!Applicationmanagerfacade*
  * [#forcestoppackage forcestoppackage]
  * [#getlaunchableapplications getlaunchableapplications]
  * [#getrunningpackages getrunningpackages]
  * [#launch launch]
-*!batterymanagerfacade*
+*!Batterymanagerfacade*
  * [#batterycheckpresent batterycheckpresent]
  * [#batterygethealth batterygethealth]
  * [#batterygetlevel batterygetlevel]
@@ -59,7 +59,7 @@
  * [#batterystartmonitoring batterystartmonitoring]
  * [#batterystopmonitoring batterystopmonitoring]
  * [#readbatterydata readbatterydata]
-*!bluetoothfacade*
+*!Bluetoothfacade*
  * [#bluetoothaccept bluetoothaccept]
  * [#bluetoothconnect bluetoothconnect]
  * [#bluetoothgetconnecteddevicename bluetoothgetconnecteddevicename]
@@ -71,10 +71,10 @@
  * [#bluetoothwrite bluetoothwrite]
  * [#checkbluetoothstate checkbluetoothstate]
  * [#togglebluetoothstate togglebluetoothstate]
-*!camerafacade*
+*!Camerafacade*
  * [#cameracapturepicture cameracapturepicture]
  * [#camerainteractivecapturepicture camerainteractivecapturepicture]
-*!commonintentsfacade*
+*!Commonintentsfacade*
  * [#pick pick]
  * [#scanbarcode scanbarcode]
  * [#search search]
@@ -82,9 +82,9 @@
  * [#viewcontacts viewcontacts]
  * [#viewhtml viewhtml]
  * [#viewmap viewmap]
-*!conditionmanagerfacade*
+*!Conditionmanagerfacade*
  * [#onringersilent onringersilent]
-*!contactsfacade*
+*!Contactsfacade*
  * [#contactsget contactsget]
  * [#contactsgetattributes contactsgetattributes]
  * [#contactsgetbyid contactsgetbyid]
@@ -92,22 +92,22 @@
  * [#contactsgetids contactsgetids]
  * [#pickcontact pickcontact]
  * [#pickphone pickphone]
-*!eventfacade*
+*!Eventfacade*
  * [#postevent postevent]
  * [#receiveevent receiveevent]
  * [#waitforevent waitforevent]
-*!locationfacade*
+*!Locationfacade*
  * [#geocode geocode]
  * [#getlastknownlocation getlastknownlocation]
  * [#readlocation readlocation]
  * [#startlocating startlocating]
  * [#stoplocating stoplocating]
-*!mediarecorderfacade*
+*!Mediarecorderfacade*
  * [#recordercapturevideo recordercapturevideo]
  * [#recorderstartmicrophone recorderstartmicrophone]
  * [#recorderstop recorderstop]
  * [#startinteractivevideorecording startinteractivevideorecording]
-*!phonefacade*
+*!Phonefacade*
  * [#checknetworkroaming checknetworkroaming]
  * [#getcelllocation getcelllocation]
  * [#getdeviceid getdeviceid]
@@ -133,7 +133,7 @@
  * [#readphonestate readphonestate]
  * [#starttrackingphonestate starttrackingphonestate]
  * [#stoptrackingphonestate stoptrackingphonestate]
-*!pulsegeneratorfacade*
+*!Pulsegeneratorfacade*
  * [#pulsegeneratorgethz pulsegeneratorgethz]
  * [#pulsegeneratorgethzsamples pulsegeneratorgethzsamples]
  * [#pulsegeneratorgetleftpulsems pulsegeneratorgetleftpulsems]
@@ -151,7 +151,7 @@
  * [#pulsegeneratortoggleinverted pulsegeneratortoggleinverted]
  * [#pulsegeneratortoggleplayback pulsegeneratortoggleplayback]
  * [#pulsegenteratorsethz pulsegenteratorsethz]
-*!sensormanagerfacade*
+*!Sensormanagerfacade*
  * [#readsensors readsensors]
  * [#sensorsgetaccuracy sensorsgetaccuracy]
  * [#sensorsgetlight sensorsgetlight]
@@ -160,7 +160,7 @@
  * [#sensorsreadorientation sensorsreadorientation]
  * [#startsensing startsensing]
  * [#stopsensing stopsensing]
-*!settingsfacade*
+*!Settingsfacade*
  * [#checkairplanemode checkairplanemode]
  * [#checkringersilentmode checkringersilentmode]
  * [#checkscreenon checkscreenon]
@@ -176,11 +176,11 @@
  * [#setscreentimeout setscreentimeout]
  * [#toggleairplanemode toggleairplanemode]
  * [#toggleringersilentmode toggleringersilentmode]
-*!signalstrengthfacade 需要 api level 7.*
+*!Signalstrengthfacade 需要 api level 7.*
  * [#readsignalstrengths readsignalstrengths]
  * [#starttrackingsignalstrengths starttrackingsignalstrengths]
  * [#stoptrackingsignalstrengths stoptrackingsignalstrengths]
-*!smsfacade*
+*!Smsfacade*
  * [#smsdeletemessage smsdeletemessage]
  * [#smsgetattributes smsgetattributes]
  * [#smsgetmessagebyid smsgetmessagebyid]
@@ -189,14 +189,14 @@
  * [#smsgetmessages smsgetmessages]
  * [#smsmarkmessageread smsmarkmessageread]
  * [#smssend smssend]
-*!speechrecognitionfacade*
+*!Speechrecognitionfacade*
  * [#recognizespeech recognizespeech]
-*!texttospeechfacade 需要 api level 4.*
+*!Texttospeechfacade 需要 api level 4.*
  * [#ttsisspeaking ttsisspeaking]
  * [#ttsspeak ttsspeak]
-*!tonegeneratorfacade*
+*!Tonegeneratorfacade*
  * [#generatedtmftones generatedtmftones]
-*!uifacade*
+*!Uifacade*
  * [#addcontextmenuitem addcontextmenuitem]
  * [#addoptionsmenuitem addoptionsmenuitem]
  * [#clearcontextmenu clearcontextmenu]
@@ -224,13 +224,13 @@
  * [#dialogsetsinglechoiceitems dialogsetsinglechoiceitems]
  * [#dialogshow dialogshow]
  * [#webviewshow webviewshow]
-*!wakeLockFacade*
+*!WakeLockFacade*
  * [#wakeLockAcquireBright wakeLockAcquireBright]
  * [#wakeLockAcquireDim wakeLockAcquireDim]
  * [#wakeLockAcquireFull wakeLockAcquireFull]
  * [#wakeLockAcquirePartial wakeLockAcquirePartial]
  * [#wakeLockRelease wakeLockRelease]
-*!wifiFacade*
+*!WifiFacade*
  * [#checkWifiState checkWifiState]
  * [#toggleWifiState toggleWifiState]
  * [#wifiDisconnect wifiDisconnect]
@@ -2201,7 +2201,6 @@ dialogsetcurrentprogress(
  integer current)
 
 设置进度条的当前值。
-
 }}}
 
 ===,,dialogsetitems,,===
