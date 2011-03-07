@@ -2063,14 +2063,14 @@ dialogcreatedatepicker(
 }}}
 
 ===,,dialogcreatehorizontalprogress,,===
-创建一个水平滚动对话框
+创建一个水平进度条对话框
 {{{
 dialogcreatehorizontalprogress(
  string title[可选],
  string message[可选],
  integer maximum progress[可选, 默认值为 100])
 
-创建一个水平滚动对话框。
+创建一个水平进度条对话框。
 }}}
 
 ===,,dialogcreateinput,,===
