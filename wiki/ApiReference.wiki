@@ -2195,7 +2195,7 @@ dialogsetitems(
 设计警告窗口的列表条目。
 }}}
 
-===,,dialogsetmax设计进度条的最大值progress,,===
+===,,dialogsetmaxprogress,,===
 设置进度条的最大值
 {{{
 dialogsetmaxprogress(
