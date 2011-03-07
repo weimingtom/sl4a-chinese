@@ -224,13 +224,13 @@
  * [#dialogsetsinglechoiceitems dialogsetsinglechoiceitems]
  * [#dialogshow dialogshow]
  * [#webviewshow webviewshow]
-*!WakeLockFacade*
+*!wakeLockFacade*
  * [#wakeLockAcquireBright wakeLockAcquireBright]
  * [#wakeLockAcquireDim wakeLockAcquireDim]
  * [#wakeLockAcquireFull wakeLockAcquireFull]
  * [#wakeLockAcquirePartial wakeLockAcquirePartial]
  * [#wakeLockRelease wakeLockRelease]
-*!WifiFacade*
+*!wifiFacade*
  * [#checkWifiState checkWifiState]
  * [#toggleWifiState toggleWifiState]
  * [#wifiDisconnect wifiDisconnect]
